@@ -1,14 +1,40 @@
 import Foundation
 import UIKit
 
-// Used to draw detection rectangles on screen
+
 class DetectionsCanvas: UIView {
     var labelmap = [String]()
     var detections = [Float]() // Raw results from detector
 
     // The size of the image we run detection on
-    var capFrameWidth = 0
-    var capFrameHeight = 0
+    var actualCameraFrameWidth: CGFloat = 0
+    var actualCameraFrameHeight: CGFloat = 0
+    var poses: [Pose] = []
+    
+    struct JointSegment {
+        let jointA: Joint.Name
+        let jointB: Joint.Name
+    }
+    
+    static let jointSegments = [
+        // The connected joints that are on the left side of the body.
+        JointSegment(jointA: .leftHip, jointB: .leftShoulder),
+        JointSegment(jointA: .leftShoulder, jointB: .leftElbow),
+        JointSegment(jointA: .leftElbow, jointB: .leftWrist),
+        JointSegment(jointA: .leftHip, jointB: .leftKnee),
+        JointSegment(jointA: .leftKnee, jointB: .leftAnkle),
+        // The connected joints that are on the right side of the body.
+        JointSegment(jointA: .rightHip, jointB: .rightShoulder),
+        JointSegment(jointA: .rightShoulder, jointB: .rightElbow),
+        JointSegment(jointA: .rightElbow, jointB: .rightWrist),
+        JointSegment(jointA: .rightHip, jointB: .rightKnee),
+        JointSegment(jointA: .rightKnee, jointB: .rightAnkle),
+        // The connected joints that cross over the body.
+        JointSegment(jointA: .leftShoulder, jointB: .rightShoulder),
+        JointSegment(jointA: .leftHip, jointB: .rightHip)
+    ]
+    
+    
     
     override func draw(_ rect: CGRect) {
         if (detections.count < 1) {return}
@@ -17,10 +43,8 @@ class DetectionsCanvas: UIView {
         guard let context = UIGraphicsGetCurrentContext() else {return}
         context.clear(self.frame)
 
-        // detection coords are in frame coord system, convert to screen coords
-        let scaleX = self.frame.size.width / CGFloat(capFrameWidth)
-        let scaleY = self.frame.size.height / CGFloat(capFrameHeight)
-
+        let scaleX = self.frame.size.width / 300.0
+        let scaleY = self.frame.size.height / 300.0
         // The camera view offset on screen
         let xoff = self.frame.minX
         let yoff = self.frame.minY
@@ -40,6 +64,7 @@ class DetectionsCanvas: UIView {
             let labelIdx = classId
             let label = labelmap.count > labelIdx ? labelmap[labelIdx] : classId.description
 
+
             // Draw rect
             context.beginPath()
             context.move(to: CGPoint(x: xmin, y: ymin))
@@ -53,12 +78,69 @@ class DetectionsCanvas: UIView {
             context.drawPath(using: .stroke)
 
             // Draw label
+            
+            
             UIGraphicsPushContext(context)
             let font = UIFont.systemFont(ofSize: 30)
             let string = NSAttributedString(string: label, attributes: [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.red])
             string.draw(at: CGPoint(x: xmin, y: ymin))
         }
+        if !poses.isEmpty {
+            for pose in poses {
+                drawPose(pose, in: rect)
+            }
+        }
         
         UIGraphicsPopContext()
     }
+    
+    
+    func drawPose(_ pose: Pose, in rect: CGRect) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            print("Failed to get graphics context")
+            return
+        }
+
+        let scaleX = self.frame.size.width / actualCameraFrameWidth
+        let scaleY = self.frame.size.height / actualCameraFrameHeight
+        
+        context.setStrokeColor(UIColor.systemTeal.cgColor)
+        context.setLineWidth(2.0)
+        context.setFillColor(UIColor.systemPink.cgColor)
+
+        for segment in DetectionsCanvas.jointSegments {
+            let jointA = pose[segment.jointA]
+            let jointB = pose[segment.jointB]
+
+            if jointA.isValid && jointB.isValid {
+                let scaledJointAPosition = CGPoint(x: jointA.position.x * scaleX, y: jointA.position.y * scaleY)
+                let scaledJointBPosition = CGPoint(x: jointB.position.x * scaleX, y: jointB.position.y * scaleY)
+                
+                context.move(to: scaledJointAPosition)
+                context.addLine(to: scaledJointBPosition)
+                context.strokePath()
+            }
+        }
+
+        for joint in pose.joints.values.filter({ $0.isValid }) {
+            let scaledJointPosition = CGPoint(x: joint.position.x * scaleX, y: joint.position.y * scaleY)
+            let rectangle = CGRect(x: scaledJointPosition.x - 4, y: scaledJointPosition.y - 4, width: 8, height: 8)
+            context.addEllipse(in: rectangle)
+            context.drawPath(using: .fill)
+        }
+    }
+
+
+    private func drawLine(from jointA: Joint, to jointB: Joint, in context: CGContext) {
+        context.move(to: jointA.position)
+        context.addLine(to: jointB.position)
+        context.strokePath()
+    }
+
+    private func draw(circle joint: Joint, in context: CGContext) {
+        let rectangle = CGRect(x: joint.position.x - 4, y: joint.position.y - 4, width: 8, height: 8)
+        context.addEllipse(in: rectangle)
+        context.drawPath(using: .fill)
+    }
+
 }

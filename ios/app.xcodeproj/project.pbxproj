@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E706A5026358FE8002D33DE /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7E706A4E26358FE8002D33DE /* labels.txt */; };
-		7E706A5126358FE8002D33DE /* od_model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7E706A4F26358FE8002D33DE /* od_model.tflite */; };
+		306AB5BB2B3696DC0040F166 /* mobilenetv1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */; };
+		306AB5BC2B3696DC0040F166 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5B92B3696DC0040F166 /* labels.txt */; };
+		306AB5BD2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */; };
+		306AB5E32B36AA4C0040F166 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */; };
+		306AB5E42B36AA4C0040F166 /* PopOverModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */; };
+		306AB5E52B36AA4C0040F166 /* GradientOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */; };
+		306AB5EB2B36AA4C0040F166 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D02B36AA4C0040F166 /* CGPoint+Extension.swift */; };
+		306AB5EC2B36AA4C0040F166 /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D12B36AA4C0040F166 /* CGImage+Extension.swift */; };
+		306AB5ED2B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D32B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift */; };
+		306AB5EE2B36AA4C0040F166 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D42B36AA4C0040F166 /* VideoCapture.swift */; };
+		306AB5EF2B36AA4C0040F166 /* Joint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D62B36AA4C0040F166 /* Joint.swift */; };
+		306AB5F02B36AA4C0040F166 /* PoseBuilder+Multiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D72B36AA4C0040F166 /* PoseBuilder+Multiple.swift */; };
+		306AB5F12B36AA4C0040F166 /* PoseBuilder+Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D82B36AA4C0040F166 /* PoseBuilder+Single.swift */; };
+		306AB5F22B36AA4C0040F166 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D92B36AA4C0040F166 /* Pose.swift */; };
+		306AB5F32B36AA4C0040F166 /* PoseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DA2B36AA4C0040F166 /* PoseBuilder.swift */; };
+		306AB5F42B36AA4C0040F166 /* PoseBuilderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DB2B36AA4C0040F166 /* PoseBuilderConfiguration.swift */; };
+		306AB5F52B36AA4C0040F166 /* PoseNetOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DD2B36AA4C0040F166 /* PoseNetOutput.swift */; };
+		306AB5F62B36AA4C0040F166 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DE2B36AA4C0040F166 /* PoseNet.swift */; };
+		306AB5F72B36AA4C0040F166 /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DF2B36AA4C0040F166 /* PoseNetInput.swift */; };
+		306AB5F82B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5E02B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel */; };
 		7E706A5726359020002D33DE /* CV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E706A5526359020002D33DE /* CV.mm */; };
 		7E706A5C263590A7002D33DE /* ObjectDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E706A5B263590A7002D33DE /* ObjectDetector.cpp */; };
 		7E706A5F2635922C002D33DE /* TensorFlowLiteC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E706A5E2635922C002D33DE /* TensorFlowLiteC.framework */; };
@@ -40,8 +58,26 @@
 
 /* Begin PBXFileReference section */
 		2C83BCE4B2394EFBFEBE87FC /* Pods_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E706A4E26358FE8002D33DE /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
-		7E706A4F26358FE8002D33DE /* od_model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = od_model.tflite; sourceTree = "<group>"; };
+		306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenetv1.tflite; sourceTree = "<group>"; };
+		306AB5B92B3696DC0040F166 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "M-LSD_320_tiny_fp16.tflite"; sourceTree = "<group>"; };
+		306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverModalViewController.swift; sourceTree = "<group>"; };
+		306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientOverlayView.swift; sourceTree = "<group>"; };
+		306AB5D02B36AA4C0040F166 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
+		306AB5D12B36AA4C0040F166 /* CGImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Extension.swift"; sourceTree = "<group>"; };
+		306AB5D32B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoOrientation+Extension.swift"; sourceTree = "<group>"; };
+		306AB5D42B36AA4C0040F166 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		306AB5D62B36AA4C0040F166 /* Joint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joint.swift; sourceTree = "<group>"; };
+		306AB5D72B36AA4C0040F166 /* PoseBuilder+Multiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PoseBuilder+Multiple.swift"; sourceTree = "<group>"; };
+		306AB5D82B36AA4C0040F166 /* PoseBuilder+Single.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PoseBuilder+Single.swift"; sourceTree = "<group>"; };
+		306AB5D92B36AA4C0040F166 /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		306AB5DA2B36AA4C0040F166 /* PoseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseBuilder.swift; sourceTree = "<group>"; };
+		306AB5DB2B36AA4C0040F166 /* PoseBuilderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseBuilderConfiguration.swift; sourceTree = "<group>"; };
+		306AB5DD2B36AA4C0040F166 /* PoseNetOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetOutput.swift; sourceTree = "<group>"; };
+		306AB5DE2B36AA4C0040F166 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
+		306AB5DF2B36AA4C0040F166 /* PoseNetInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
+		306AB5E02B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
 		7E706A542635901F002D33DE /* app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "app-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E706A5526359020002D33DE /* CV.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CV.mm; sourceTree = "<group>"; };
 		7E706A5626359020002D33DE /* CV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CV.h; sourceTree = "<group>"; };
@@ -75,6 +111,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306AB5B72B3696DC0040F166 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */,
+				306AB5B92B3696DC0040F166 /* labels.txt */,
+				306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		306AB5C02B36AA4C0040F166 /* PoseFinder */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5C12B36AA4C0040F166 /* UI */,
+				306AB5CF2B36AA4C0040F166 /* Extensions+Types */,
+				306AB5D22B36AA4C0040F166 /* Utils */,
+				306AB5D52B36AA4C0040F166 /* Pose */,
+				306AB5DC2B36AA4C0040F166 /* Model */,
+			);
+			path = PoseFinder;
+			sourceTree = "<group>";
+		};
+		306AB5C12B36AA4C0040F166 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */,
+				306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */,
+				306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		306AB5CF2B36AA4C0040F166 /* Extensions+Types */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5D02B36AA4C0040F166 /* CGPoint+Extension.swift */,
+				306AB5D12B36AA4C0040F166 /* CGImage+Extension.swift */,
+			);
+			path = "Extensions+Types";
+			sourceTree = "<group>";
+		};
+		306AB5D22B36AA4C0040F166 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5D32B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift */,
+				306AB5D42B36AA4C0040F166 /* VideoCapture.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		306AB5D52B36AA4C0040F166 /* Pose */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5D62B36AA4C0040F166 /* Joint.swift */,
+				306AB5D72B36AA4C0040F166 /* PoseBuilder+Multiple.swift */,
+				306AB5D82B36AA4C0040F166 /* PoseBuilder+Single.swift */,
+				306AB5D92B36AA4C0040F166 /* Pose.swift */,
+				306AB5DA2B36AA4C0040F166 /* PoseBuilder.swift */,
+				306AB5DB2B36AA4C0040F166 /* PoseBuilderConfiguration.swift */,
+			);
+			path = Pose;
+			sourceTree = "<group>";
+		};
+		306AB5DC2B36AA4C0040F166 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				306AB5DD2B36AA4C0040F166 /* PoseNetOutput.swift */,
+				306AB5DE2B36AA4C0040F166 /* PoseNet.swift */,
+				306AB5DF2B36AA4C0040F166 /* PoseNetInput.swift */,
+				306AB5E02B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4FBC8C482C0D597ADF751D1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +201,6 @@
 				2C83BCE4B2394EFBFEBE87FC /* Pods_app.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7E706A4D26358FE8002D33DE /* models */ = {
-			isa = PBXGroup;
-			children = (
-				7E706A4E26358FE8002D33DE /* labels.txt */,
-				7E706A4F26358FE8002D33DE /* od_model.tflite */,
-			);
-			name = models;
-			path = ../../models;
 			sourceTree = "<group>";
 		};
 		7E706A5326358FFB002D33DE /* Native */ = {
@@ -136,8 +236,9 @@
 		7EC1591B263483DC007BD724 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				306AB5C02B36AA4C0040F166 /* PoseFinder */,
+				306AB5B72B3696DC0040F166 /* models */,
 				7E706A5326358FFB002D33DE /* Native */,
-				7E706A4D26358FE8002D33DE /* models */,
 				7EC1591C263483DC007BD724 /* AppDelegate.swift */,
 				7EC1591E263483DC007BD724 /* SceneDelegate.swift */,
 				7EC15920263483DC007BD724 /* ViewController.swift */,
@@ -164,6 +265,7 @@
 				7EC15917263483DC007BD724 /* Resources */,
 				7E706A612635922C002D33DE /* Embed Frameworks */,
 				7E706A6226359328002D33DE /* ShellScript */,
+				306AB5862B3373C80040F166 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,17 +314,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E706A5126358FE8002D33DE /* od_model.tflite in Resources */,
 				7EC15929263483DF007BD724 /* LaunchScreen.storyboard in Resources */,
 				7EC15926263483DF007BD724 /* Assets.xcassets in Resources */,
+				306AB5BC2B3696DC0040F166 /* labels.txt in Resources */,
+				306AB5BB2B3696DC0040F166 /* mobilenetv1.tflite in Resources */,
+				306AB5BD2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite in Resources */,
 				7EC15924263483DC007BD724 /* Main.storyboard in Resources */,
-				7E706A5026358FE8002D33DE /* labels.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		306AB5862B3373C80040F166 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		7E706A6226359328002D33DE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,13 +389,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306AB5F72B36AA4C0040F166 /* PoseNetInput.swift in Sources */,
 				7E706A5C263590A7002D33DE /* ObjectDetector.cpp in Sources */,
 				7E706A5726359020002D33DE /* CV.mm in Sources */,
+				306AB5F02B36AA4C0040F166 /* PoseBuilder+Multiple.swift in Sources */,
+				306AB5F12B36AA4C0040F166 /* PoseBuilder+Single.swift in Sources */,
+				306AB5EF2B36AA4C0040F166 /* Joint.swift in Sources */,
+				306AB5F82B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
+				306AB5E32B36AA4C0040F166 /* ConfigurationViewController.swift in Sources */,
+				306AB5EE2B36AA4C0040F166 /* VideoCapture.swift in Sources */,
+				306AB5F22B36AA4C0040F166 /* Pose.swift in Sources */,
 				7EC15921263483DC007BD724 /* ViewController.swift in Sources */,
+				306AB5EC2B36AA4C0040F166 /* CGImage+Extension.swift in Sources */,
 				7EBD34D626348A0500E5C364 /* DetectionCanvas.swift in Sources */,
+				306AB5EB2B36AA4C0040F166 /* CGPoint+Extension.swift in Sources */,
+				306AB5F42B36AA4C0040F166 /* PoseBuilderConfiguration.swift in Sources */,
 				7EC15932263486A3007BD724 /* ObjectDetectionVC.swift in Sources */,
+				306AB5E42B36AA4C0040F166 /* PopOverModalViewController.swift in Sources */,
+				306AB5F52B36AA4C0040F166 /* PoseNetOutput.swift in Sources */,
 				7EC1591D263483DC007BD724 /* AppDelegate.swift in Sources */,
+				306AB5E52B36AA4C0040F166 /* GradientOverlayView.swift in Sources */,
 				7EC1591F263483DC007BD724 /* SceneDelegate.swift in Sources */,
+				306AB5F62B36AA4C0040F166 /* PoseNet.swift in Sources */,
+				306AB5ED2B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
+				306AB5F32B36AA4C0040F166 /* PoseBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +475,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -399,6 +538,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -425,25 +565,28 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KG86WG3X2K;
+				DEVELOPMENT_TEAM = VX6GTGT55Q;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/OpenCV\"",
-					"/Users/yuval/MyProjects/tflite-dist/libs/ios_fat",
+					"/Users/kristianoconnor/documents/creations/tflite-dist/libs/ios_fat",
 				);
-				HEADER_SEARCH_PATHS = "/Users/yuval/MyProjects/tflite-dist/include";
+				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/documents/creations/tflite-dist/include";
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vyw.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "app/Native/app-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
@@ -456,19 +599,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KG86WG3X2K;
+				DEVELOPMENT_TEAM = VX6GTGT55Q;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/OpenCV\"",
-					"/Users/yuval/MyProjects/tflite-dist/libs/ios_fat",
+					"/Users/kristianoconnor/documents/creations/tflite-dist/libs/ios_fat",
 				);
-				HEADER_SEARCH_PATHS = "/Users/yuval/MyProjects/tflite-dist/include";
+				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/documents/creations/tflite-dist/include";
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vyw.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "app/Native/app-Bridging-Header.h";

@@ -20,7 +20,7 @@ static ObjectDetector* detector = nil;
     long size = 0;
     char* model = nullptr;
     NSError* configLoadError = nil;
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"od_model" ofType:@"tflite"];
+    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"mobilenetv1" ofType:@"tflite"];
     NSData* data = [NSData dataWithContentsOfFile:modelPath options:0 error:&configLoadError];
     if (!data) {
       NSLog(@"Failed to load model: %@", configLoadError);
@@ -29,7 +29,7 @@ static ObjectDetector* detector = nil;
         model = (char*)data.bytes;
     }
 
-    detector = new ObjectDetector((const char*)model, size, false);
+    detector = new ObjectDetector((const char*)model, size, true);
 }
 
 -(NSArray*) detect: (CMSampleBufferRef)buffer {
