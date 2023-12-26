@@ -1,6 +1,11 @@
 {
   "colors" : [
     {
+      "color" : {
+        "platform" : "universal",
+        "reference" : "secondaryLabelColor"
+      },
+      "filename" : "DALL·E 2023-12-21 00.11.03 - Further enhance the iOS app icon design for a squat tracking app, making it more visually appealing and compelling. Incorporate the cartoonish person .png",
       "idiom" : "universal"
     }
   ],
