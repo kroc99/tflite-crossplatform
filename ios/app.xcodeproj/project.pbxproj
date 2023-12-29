@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305BC76A2B3D494F006CD9E1 /* TensorFlowLiteC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30932D622B3D1D63005EED1A /* TensorFlowLiteC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		305BC76C2B3E0182006CD9E1 /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 305BC76B2B3E0182006CD9E1 /* detect.tflite */; };
 		306AB5BB2B3696DC0040F166 /* mobilenetv1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */; };
 		306AB5BC2B3696DC0040F166 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5B92B3696DC0040F166 /* labels.txt */; };
 		306AB5BD2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */; };
-		306AB5E32B36AA4C0040F166 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */; };
-		306AB5E42B36AA4C0040F166 /* PopOverModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */; };
-		306AB5E52B36AA4C0040F166 /* GradientOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */; };
 		306AB5EB2B36AA4C0040F166 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D02B36AA4C0040F166 /* CGPoint+Extension.swift */; };
 		306AB5EC2B36AA4C0040F166 /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D12B36AA4C0040F166 /* CGImage+Extension.swift */; };
 		306AB5ED2B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5D32B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift */; };
@@ -27,10 +26,9 @@
 		306AB5F62B36AA4C0040F166 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DE2B36AA4C0040F166 /* PoseNet.swift */; };
 		306AB5F72B36AA4C0040F166 /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5DF2B36AA4C0040F166 /* PoseNetInput.swift */; };
 		306AB5F82B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 306AB5E02B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel */; };
+		30932D632B3D1D64005EED1A /* TensorFlowLiteC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30932D622B3D1D63005EED1A /* TensorFlowLiteC.framework */; };
 		7E706A5726359020002D33DE /* CV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E706A5526359020002D33DE /* CV.mm */; };
 		7E706A5C263590A7002D33DE /* ObjectDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E706A5B263590A7002D33DE /* ObjectDetector.cpp */; };
-		7E706A5F2635922C002D33DE /* TensorFlowLiteC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E706A5E2635922C002D33DE /* TensorFlowLiteC.framework */; };
-		7E706A602635922C002D33DE /* TensorFlowLiteC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E706A5E2635922C002D33DE /* TensorFlowLiteC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7EBD34D626348A0500E5C364 /* DetectionCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD34D526348A0500E5C364 /* DetectionCanvas.swift */; };
 		7EC1591D263483DC007BD724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1591C263483DC007BD724 /* AppDelegate.swift */; };
 		7EC1591F263483DC007BD724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1591E263483DC007BD724 /* SceneDelegate.swift */; };
@@ -43,13 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7E706A612635922C002D33DE /* Embed Frameworks */ = {
+		30932D652B3D1D64005EED1A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7E706A602635922C002D33DE /* TensorFlowLiteC.framework in Embed Frameworks */,
+				305BC76A2B3D494F006CD9E1 /* TensorFlowLiteC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -58,12 +56,10 @@
 
 /* Begin PBXFileReference section */
 		2C83BCE4B2394EFBFEBE87FC /* Pods_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		305BC76B2B3E0182006CD9E1 /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenetv1.tflite; sourceTree = "<group>"; };
 		306AB5B92B3696DC0040F166 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "M-LSD_320_tiny_fp16.tflite"; sourceTree = "<group>"; };
-		306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
-		306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverModalViewController.swift; sourceTree = "<group>"; };
-		306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientOverlayView.swift; sourceTree = "<group>"; };
 		306AB5D02B36AA4C0040F166 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		306AB5D12B36AA4C0040F166 /* CGImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Extension.swift"; sourceTree = "<group>"; };
 		306AB5D32B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoOrientation+Extension.swift"; sourceTree = "<group>"; };
@@ -78,12 +74,12 @@
 		306AB5DE2B36AA4C0040F166 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		306AB5DF2B36AA4C0040F166 /* PoseNetInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
 		306AB5E02B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
+		30932D622B3D1D63005EED1A /* TensorFlowLiteC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TensorFlowLiteC.framework; path = "../../../../Downloads/tflite-dist 2/libs/ios_fat/TensorFlowLiteC.framework"; sourceTree = "<group>"; };
 		7E706A542635901F002D33DE /* app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "app-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E706A5526359020002D33DE /* CV.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CV.mm; sourceTree = "<group>"; };
 		7E706A5626359020002D33DE /* CV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CV.h; sourceTree = "<group>"; };
 		7E706A5A263590A7002D33DE /* ObjectDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDetector.h; path = ../../../ObjectDetection/ObjectDetector.h; sourceTree = "<group>"; };
 		7E706A5B263590A7002D33DE /* ObjectDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDetector.cpp; path = ../../../ObjectDetection/ObjectDetector.cpp; sourceTree = "<group>"; };
-		7E706A5E2635922C002D33DE /* TensorFlowLiteC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TensorFlowLiteC.framework; path = "../../tflite-dist/libs/ios_fat/TensorFlowLiteC.framework"; sourceTree = "<group>"; };
 		7EBD34D526348A0500E5C364 /* DetectionCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionCanvas.swift; sourceTree = "<group>"; };
 		7EC15919263483DC007BD724 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC1591C263483DC007BD724 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED70BF2D9D9205DA37B7626 /* Pods_app.framework in Frameworks */,
-				7E706A5F2635922C002D33DE /* TensorFlowLiteC.framework in Frameworks */,
+				30932D632B3D1D64005EED1A /* TensorFlowLiteC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +110,7 @@
 		306AB5B72B3696DC0040F166 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				305BC76B2B3E0182006CD9E1 /* detect.tflite */,
 				306AB5B82B3696DC0040F166 /* mobilenetv1.tflite */,
 				306AB5B92B3696DC0040F166 /* labels.txt */,
 				306AB5BA2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite */,
@@ -124,23 +121,12 @@
 		306AB5C02B36AA4C0040F166 /* PoseFinder */ = {
 			isa = PBXGroup;
 			children = (
-				306AB5C12B36AA4C0040F166 /* UI */,
 				306AB5CF2B36AA4C0040F166 /* Extensions+Types */,
 				306AB5D22B36AA4C0040F166 /* Utils */,
 				306AB5D52B36AA4C0040F166 /* Pose */,
 				306AB5DC2B36AA4C0040F166 /* Model */,
 			);
 			path = PoseFinder;
-			sourceTree = "<group>";
-		};
-		306AB5C12B36AA4C0040F166 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				306AB5C42B36AA4C0040F166 /* ConfigurationViewController.swift */,
-				306AB5C52B36AA4C0040F166 /* PopOverModalViewController.swift */,
-				306AB5C62B36AA4C0040F166 /* GradientOverlayView.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		306AB5CF2B36AA4C0040F166 /* Extensions+Types */ = {
@@ -197,7 +183,7 @@
 		70C4CFD039006EC60F597E86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E706A5E2635922C002D33DE /* TensorFlowLiteC.framework */,
+				30932D622B3D1D63005EED1A /* TensorFlowLiteC.framework */,
 				2C83BCE4B2394EFBFEBE87FC /* Pods_app.framework */,
 			);
 			name = Frameworks;
@@ -263,9 +249,9 @@
 				7EC15915263483DC007BD724 /* Sources */,
 				7EC15916263483DC007BD724 /* Frameworks */,
 				7EC15917263483DC007BD724 /* Resources */,
-				7E706A612635922C002D33DE /* Embed Frameworks */,
 				7E706A6226359328002D33DE /* ShellScript */,
 				306AB5862B3373C80040F166 /* ShellScript */,
+				30932D652B3D1D64005EED1A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +305,7 @@
 				306AB5BC2B3696DC0040F166 /* labels.txt in Resources */,
 				306AB5BB2B3696DC0040F166 /* mobilenetv1.tflite in Resources */,
 				306AB5BD2B3696DC0040F166 /* M-LSD_320_tiny_fp16.tflite in Resources */,
+				305BC76C2B3E0182006CD9E1 /* detect.tflite in Resources */,
 				7EC15924263483DC007BD724 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +383,6 @@
 				306AB5F12B36AA4C0040F166 /* PoseBuilder+Single.swift in Sources */,
 				306AB5EF2B36AA4C0040F166 /* Joint.swift in Sources */,
 				306AB5F82B36AA4C0040F166 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
-				306AB5E32B36AA4C0040F166 /* ConfigurationViewController.swift in Sources */,
 				306AB5EE2B36AA4C0040F166 /* VideoCapture.swift in Sources */,
 				306AB5F22B36AA4C0040F166 /* Pose.swift in Sources */,
 				7EC15921263483DC007BD724 /* ViewController.swift in Sources */,
@@ -405,10 +391,8 @@
 				306AB5EB2B36AA4C0040F166 /* CGPoint+Extension.swift in Sources */,
 				306AB5F42B36AA4C0040F166 /* PoseBuilderConfiguration.swift in Sources */,
 				7EC15932263486A3007BD724 /* ObjectDetectionVC.swift in Sources */,
-				306AB5E42B36AA4C0040F166 /* PopOverModalViewController.swift in Sources */,
 				306AB5F52B36AA4C0040F166 /* PoseNetOutput.swift in Sources */,
 				7EC1591D263483DC007BD724 /* AppDelegate.swift in Sources */,
-				306AB5E52B36AA4C0040F166 /* GradientOverlayView.swift in Sources */,
 				7EC1591F263483DC007BD724 /* SceneDelegate.swift in Sources */,
 				306AB5F62B36AA4C0040F166 /* PoseNet.swift in Sources */,
 				306AB5ED2B36AA4C0040F166 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
@@ -477,6 +461,7 @@
 				ENABLE_TESTABILITY = YES;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kristianoconnor/Downloads/tflite-dist/libs/ios_fat";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -539,6 +524,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = "/Users/kristianoconnor/Downloads/tflite-dist/libs/ios_fat";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -570,9 +556,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/OpenCV\"",
-					"/Users/kristianoconnor/documents/creations/tflite-dist/libs/ios_fat",
+					"/Users/kristianoconnor/Downloads/tflite-dist/libs/ios_fat",
 				);
-				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/documents/creations/tflite-dist/include";
+				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/Downloads/tflite-dist/include";
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -604,9 +590,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/OpenCV\"",
-					"/Users/kristianoconnor/documents/creations/tflite-dist/libs/ios_fat",
+					"/Users/kristianoconnor/Downloads/tflite-dist/libs/ios_fat",
 				);
-				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/documents/creations/tflite-dist/include";
+				HEADER_SEARCH_PATHS = "/Users/kristianoconnor/Downloads/tflite-dist/include";
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
