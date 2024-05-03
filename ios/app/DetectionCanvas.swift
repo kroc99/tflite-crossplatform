@@ -5,6 +5,7 @@ import UIKit
 class DetectionsCanvas: UIView {
     var labelmap = [String]()
     var detections = [Float]() // Raw results from detector
+    var circledetections = [Float]()
     
     // The size of the image we run detection on
     var actualCameraFrameWidth: CGFloat = 0
@@ -13,6 +14,8 @@ class DetectionsCanvas: UIView {
     var plateCenters: [Int: [CGPoint]] = [:]
     var squatsDone = 0
     var isCurrentlySquatting = true
+    var largestBoundingBox: CGRect = .zero
+    var largestBoxCenter: CGPoint = .zero
     
     var tolerancevalue = 10.0
     
@@ -57,6 +60,10 @@ class DetectionsCanvas: UIView {
         let yoff = self.frame.minY
         
         let count = detections.count / 6
+        
+        
+        let mainlabel = ""
+        
         for i in 0..<count {
             let idx = i * 6
             let classId = Int(detections[idx])
@@ -84,17 +91,35 @@ class DetectionsCanvas: UIView {
             context.setStrokeColor(UIColor.red.cgColor)
             context.drawPath(using: .stroke)
             
-            // Find the center of the box and add to plateCenter
-            
+          
             if label == "person" {
+                let boundingBox = CGRect(x: xmin, y: ymin, width: xmax - xmin, height: ymax - ymin)
+                let boundingBoxArea = boundingBox.width * boundingBox.height
+
+                // Check if this box is larger than the current largest
+                if boundingBoxArea > largestBoundingBox.width * largestBoundingBox.height {
+                    largestBoundingBox = boundingBox
+                    largestBoxCenter = CGPoint(x: (xmin + xmax) / 2, y: (ymin + ymax) / 2)
+                }
                 let middleX = (xmin + xmax) / 2
                 let middleY = (ymin + ymax) / 2
                 let center = CGPoint(x: middleX, y: middleY)
                 
-                if isCurrentlySquatting {
-                    plateCenters[squatsDone + 1, default: []].append(center)
+                
+                if largestBoundingBox != .zero {
+                    // Print information about the largest bounding box
+                    print("Largest Bounding Box - Center: \(largestBoxCenter), Size: \(largestBoundingBox.size)")
+                    
+                    // Use largestBoxCenter for squat calculations
+                    if isCurrentlySquatting {
+                        plateCenters[squatsDone + 1, default: []].append(largestBoxCenter)
+                    }
+                } else {
+                    print("No valid 'person' bounding box detected.")
                 }
             }
+            
+
             
             
             // Draw label
@@ -152,10 +177,6 @@ class DetectionsCanvas: UIView {
             let rectangle = CGRect(x: scaledJointPosition.x - 4, y: scaledJointPosition.y - 4, width: 8, height: 8)
             context.addEllipse(in: rectangle)
             context.drawPath(using: .fill)
-        }
-        if isSquatPose(pose) {
-            squatsDone += 1
-            plateCenters.removeAll()
         }
     }
     
@@ -233,5 +254,7 @@ class DetectionsCanvas: UIView {
 
         return totalCount > 0 ? totalX / totalCount : 0
     }
+    
+   
 
 }
