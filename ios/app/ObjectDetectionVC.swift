@@ -125,12 +125,16 @@ class ObjectDetectionVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         // CV detection (optional, depends on your use case)
         let start = DispatchTime.now().uptimeNanoseconds
+        
         let res = cv.detect(sampleBuffer)
+ 
+        
         let span = DispatchTime.now().uptimeNanoseconds - start
         print("Detection time: \(span / 1000000) msec")
 
         // Convert results to Float and set it for drawing on the canvas
         detectionsCanvas.detections = res.compactMap {($0 as! Float)}
+        
 
         DispatchQueue.main.async { [weak self] in
             self?.detectionsCanvas.setNeedsDisplay()
